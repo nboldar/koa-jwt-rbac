@@ -1,0 +1,33 @@
+{
+  "name": "koa-jwt-rbac",
+  "version": "1.0.0",
+  "description": "\"nodejs api created with koa2 framework,app uses  jwt auth and rbac\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "koa2",
+    "jwt",
+    "rbac",
+    "js"
+  ],
+  "author": "Nikolay Boldar",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "esm": "^3.2.25",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.19.4",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.17.1",
+    "nodemailer": "^6.3.0",
+    "password-hash": "^1.2.2",
+    "randomstring": "^1.1.5"
+  }
+}
