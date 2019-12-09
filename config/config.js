@@ -1,7 +1,19 @@
-const config = {
-    admin: 1,
-    moderator: 2,
-    user: 3,
-    quest: 4
+module.exports = {
+  roles: {
+    admin: 'ROLE_ADMIN',
+    moderator: 'ROLE_MODERATOR',
+    user: 'ROLE_USER',
+    guest: 'ROLE_GUEST',
+  },
+  tokens: {
+    accessToken: {
+      type: 'access',
+      expiredIn: '10m',
+    },
+    refreshToken: {
+      type: 'refresh',
+      expiredIn: '10d',
+    },
+  },
+  maxSessionsQuantity: 5,
 };
-module.exports = config;

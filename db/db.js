@@ -1,6 +1,8 @@
+import { Model } from 'objection';
+import Knex from 'knex';
+import knexfile from '../knexfile';
 
-let config = require('../knexfile')[process.env.NODE_ENV];
-/**
- * сущность, которая работает с запросами к базе данных
- */
-module.exports = require('knex')(config);
+const knex = Knex(knexfile[process.env.NODE_ENV]);
+Model.knex(knex);
+
+export default Model;
