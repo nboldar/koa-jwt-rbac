@@ -1,5 +1,5 @@
 import { makeJwtToken } from './jwtHelper';
-import config from '../config/config';
+import config from '../config';
 
 export default async userEntity => {
   const payload = {

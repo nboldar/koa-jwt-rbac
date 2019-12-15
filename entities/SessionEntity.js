@@ -1,5 +1,5 @@
 import ms from 'ms';
-import config from '../config/config';
+import config from '../config';
 
 export default class SessionEntity {
   constructor({ userId, fingerprint, ip, ua = null, refreshToken } = {}) {

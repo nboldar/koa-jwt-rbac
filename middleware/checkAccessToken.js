@@ -1,5 +1,5 @@
 import { verifyToken } from '../auth/jwtHelper';
-import config from '../config/config';
+import config from '../config';
 
 export default async (ctx, next) => {
   const authorization =

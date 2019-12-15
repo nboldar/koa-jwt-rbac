@@ -1,5 +1,5 @@
 import bcript from 'bcryptjs';
-import randomString from 'randomstring';
+import randomString from 'uuid/v4';
 import UserModel from '../../models/UserModel';
 import validateEmail from '../../util/validateEmail';
 import { emailOptionsMaker, mailer } from '../../mailer';
@@ -18,7 +18,7 @@ class SignupAction {
         const salt = bcript.genSaltSync(10, 15);
         user.passwordHash = bcript.hashSync(password, salt);
         user.email = email;
-        user.emailConfirmToken = randomString.generate();
+        user.emailConfirmToken = randomString();
         const currentUser = await UserModel.insertModel(user);
         if (currentUser) {
           const options = emailOptionsMaker(

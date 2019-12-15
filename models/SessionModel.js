@@ -1,5 +1,5 @@
 import BaseModel from './BaseModel';
-import config from '../config/config';
+import config from '../config';
 
 export default class SessionModel extends BaseModel {
   static get tableName() {
